@@ -15,7 +15,6 @@ content:
       - name: name
         label: Naam
         type: string
-        required: true
       - name: title
         label: Subtitel
         type: string
@@ -32,34 +31,31 @@ content:
           - name: title
             label: Titel
             type: string
-            required: true
           - name: description
             label: Beschrijving
             type: string
           - name: url
             label: URL
             type: string
-            required: true
           - name: icon
             label: Stijl
             type: select
             options:
-              values:
-                - label: "Primair — rood uitgelicht"
-                  value: primary
-                - label: "LinkedIn — blauw"
-                  value: linkedin
-                - label: "GitHub — donker"
-                  value: github
-                - label: "Eten & recepten — groen"
-                  value: food
-                - label: "Calculator — blauw"
-                  value: calc
-                - label: "Muziek — paars"
-                  value: music
-                - label: "Website — bol-icoon"
-                  value: website
-                - label: "Email"
-                  value: email
-                - label: "Standaard — link-icoon"
-                  value: default
+              - label: "Primair — rood uitgelicht"
+                value: primary
+              - label: "LinkedIn — blauw"
+                value: linkedin
+              - label: "GitHub — donker"
+                value: github
+              - label: "Eten & recepten — groen"
+                value: food
+              - label: "Calculator — blauw"
+                value: calc
+              - label: "Muziek — paars"
+                value: music
+              - label: "Website"
+                value: website
+              - label: "Email"
+                value: email
+              - label: "Standaard"
+                value: default
