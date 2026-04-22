@@ -1,0 +1,63 @@
+media:
+  input: assets
+  output: /assets
+
+content:
+  - name: portfolio
+    label: Portfolio
+    type: file
+    path: content/portfolio.json
+    fields:
+      - name: page_title
+        label: Paginatitel (browsertabblad)
+        type: string
+      - name: meta_description
+        label: Meta beschrijving (SEO)
+        type: string
+      - name: name
+        label: Naam
+        type: string
+      - name: title
+        label: Subtitel
+        type: string
+      - name: tagline
+        label: Tagline
+        type: string
+      - name: footer_name
+        label: Footer tekst
+        type: string
+      - name: links
+        label: Links
+        type: list
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Beschrijving
+            type: string
+          - name: url
+            label: URL
+            type: string
+          - name: icon
+            label: Stijl
+            type: select
+            options:
+              - label: "Primair — rood uitgelicht"
+                value: primary
+              - label: "LinkedIn — blauw"
+                value: linkedin
+              - label: "GitHub — donker"
+                value: github
+              - label: "Eten & recepten — groen"
+                value: food
+              - label: "Calculator — blauw"
+                value: calc
+              - label: "Muziek — paars"
+                value: music
+              - label: "Website"
+                value: website
+              - label: "Email"
+                value: email
+              - label: "Standaard"
+                value: default
