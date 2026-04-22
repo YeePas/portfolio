@@ -22,6 +22,7 @@ content:
           - { name: title, label: Titel, type: string }
           - { name: description, label: Beschrijving, type: string }
           - { name: url, label: URL, type: string }
+          - { name: image, label: "Logo (optioneel — overschrijft icoontje)", type: image }
           - name: icon
             label: Stijl
             type: select
