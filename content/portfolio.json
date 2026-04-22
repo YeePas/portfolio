@@ -7,12 +7,6 @@
   "footer_name": "Warenhuis Willemsen",
   "links": [
     {
-      "title": "Warenhuis Willemsen",
-      "description": "Mijn professionele website",
-      "url": "https://warenhuiswillemsen.nl",
-      "icon": "primary"
-    },
-    {
       "title": "FoodNotes",
       "description": "Receptenplatform met culinaire recepten",
       "url": "https://foodnotes.nl/",
