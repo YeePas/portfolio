@@ -27,12 +27,13 @@ content:
             label: Stijl
             type: select
             options:
-              - { label: "Primair — rood uitgelicht", value: primary }
-              - { label: "LinkedIn — blauw", value: linkedin }
-              - { label: "GitHub — donker", value: github }
-              - { label: "Eten & recepten — groen", value: food }
-              - { label: "Calculator — blauw", value: calc }
-              - { label: "Muziek — paars", value: music }
-              - { label: "Website", value: website }
-              - { label: "Email", value: email }
-              - { label: "Standaard", value: default }
+              values:
+                - { label: "Primair — rood uitgelicht", value: primary }
+                - { label: "LinkedIn — blauw", value: linkedin }
+                - { label: "GitHub — donker", value: github }
+                - { label: "Eten & recepten — groen", value: food }
+                - { label: "Calculator — blauw", value: calc }
+                - { label: "Muziek — paars", value: music }
+                - { label: "Website", value: website }
+                - { label: "Email", value: email }
+                - { label: "Standaard", value: default }
