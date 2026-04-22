@@ -276,12 +276,12 @@
   };
 
   function renderWith(data) {
-    if (data.page_title) document.getElementById('page-title').textContent = data.page_title;
-    if (data.meta_description) document.getElementById('meta-description').setAttribute('content', data.meta_description);
-    if (data.name) document.getElementById('profile-name').textContent = data.name;
-    if (data.title) document.getElementById('profile-title').textContent = data.title;
-    if (data.tagline) document.getElementById('profile-tagline').textContent = data.tagline;
-    if (data.footer_name) document.getElementById('footer-name').textContent = data.footer_name;
+    if ('page_title' in data)    document.getElementById('page-title').textContent = data.page_title;
+    if ('meta_description' in data) document.getElementById('meta-description').setAttribute('content', data.meta_description);
+    if ('name' in data)          document.getElementById('profile-name').textContent = data.name;
+    if ('title' in data)         document.getElementById('profile-title').textContent = data.title;
+    if ('tagline' in data)       document.getElementById('profile-tagline').textContent = data.tagline;
+    if ('footer_name' in data)   document.getElementById('footer-name').textContent = data.footer_name;
 
     const container = document.getElementById('links-container');
     container.innerHTML = '';
