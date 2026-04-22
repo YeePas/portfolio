@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Joep Willemsen — Portfolio</title>
+<meta name="description" id="meta-description" content="Joep Willemsen — Digital Transformation Leader">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-256.png">
+<style>
+  :root {
+    --ww-red: #c13525;
+    --ww-red-dark: #a82a1c;
+    --ww-gold: #dbaf65;
+    --ww-gold-dark: #b8924a;
+    --ww-cream: #f5ecdd;
+    --ww-ink: #1f1a17;
+    --ww-gray-700: #4a4540;
+    --ww-gray-500: #8a837b;
+    --ww-gray-200: #e8e4dd;
+    --ww-gray-50: #faf8f4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    background: var(--ww-cream);
+    color: var(--ww-ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  /* ── Profile ─────────────────────────────── */
+  .profile {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .profile-logo {
+    width: 110px;
+    height: auto;
+    border-radius: 4px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  .profile-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ww-red);
+    margin-bottom: 8px;
+  }
+  .profile-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(26px, 6vw, 34px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--ww-ink);
+    margin-bottom: 14px;
+  }
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--ww-gold);
+    margin: 0 auto 14px;
+  }
+  .profile-tagline {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ww-gray-700);
+  }
+
+  /* ── Link cards (Linktree-stijl) ─────────── */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+
+  /*
+   * Grid: [icon 44px] [body, gecentreerd] [44px spatie]
+   * Hierdoor staat de body-tekst altijd optisch gecentreerd.
+   */
+  .link-card {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid var(--ww-gray-200);
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--ww-ink);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.1s ease;
+    cursor: pointer;
+  }
+  .link-card:hover {
+    border-color: var(--ww-gold);
+    box-shadow: 0 3px 14px rgba(31, 26, 23, 0.09);
+    transform: translateY(-1px);
+  }
+  .link-card:active { transform: translateY(0); box-shadow: none; }
+
+  /* Icon bubble */
+  .link-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--ww-gray-50);
+    border: 1px solid var(--ww-gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+  .link-icon svg { width: 18px; height: 18px; fill: var(--ww-ink); display: block; }
+
+  /* Body — gecentreerd */
+  .link-body { text-align: center; }
+  .link-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    display: block;
+    color: var(--ww-ink);
+    line-height: 1.2;
+  }
+  .link-desc {
+    font-size: 12px;
+    color: var(--ww-gray-500);
+    display: block;
+    margin-top: 3px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  /* ── Type: primary (rood) ──────────────── */
+  .link-card.type-primary {
+    background: var(--ww-red);
+    border-color: var(--ww-red);
+  }
+  .link-card.type-primary:hover {
+    background: var(--ww-red-dark);
+    border-color: var(--ww-red-dark);
+    box-shadow: 0 4px 18px rgba(193, 53, 37, 0.28);
+  }
+  .link-card.type-primary .link-icon {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.22);
+  }
+  .link-card.type-primary .link-icon svg { fill: white; }
+  .link-card.type-primary .link-title { color: white; }
+  .link-card.type-primary .link-desc { color: rgba(255,255,255,0.72); }
+
+  /* ── Type: linkedin ────────────────────── */
+  .link-card.type-linkedin .link-icon { background: #0A66C2; border-color: #0A66C2; }
+  .link-card.type-linkedin .link-icon svg { fill: white; }
+  .link-card.type-linkedin:hover { border-color: #0A66C2; }
+
+  /* ── Type: github ──────────────────────── */
+  .link-card.type-github .link-icon { background: #24292e; border-color: #24292e; }
+  .link-card.type-github .link-icon svg { fill: white; }
+  .link-card.type-github:hover { border-color: #24292e; }
+
+  /* ── Type: food ────────────────────────── */
+  .link-card.type-food .link-icon { background: #e8f3ec; border-color: #b2d4bc; }
+  .link-card.type-food .link-icon svg { fill: #2e7d52; }
+  .link-card.type-food:hover { border-color: #2e7d52; }
+
+  /* ── Type: calc ────────────────────────── */
+  .link-card.type-calc .link-icon { background: #eef2fb; border-color: #b5c4e8; }
+  .link-card.type-calc .link-icon svg { fill: #2d4db5; }
+  .link-card.type-calc:hover { border-color: #2d4db5; }
+
+  /* ── Type: music ───────────────────────── */
+  .link-card.type-music .link-icon { background: #f3eef8; border-color: #cab5dc; }
+  .link-card.type-music .link-icon svg { fill: #6a3a9b; }
+  .link-card.type-music:hover { border-color: #6a3a9b; }
+
+  /* ── Footer ────────────────────────────── */
+  .footer {
+    text-align: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--ww-gray-200);
+  }
+  .footer-logo {
+    height: 52px;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .footer-logo:hover { opacity: 1; }
+  .footer-name {
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--ww-gray-500);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="profile">
+    <img class="profile-logo" src="assets/logo.png" alt="Warenhuis Willemsen" id="profile-logo">
+    <div class="profile-eyebrow" id="profile-title">Digital Transformation Leader</div>
+    <h1 class="profile-name" id="profile-name">Joep Willemsen</h1>
+    <div class="divider"></div>
+    <p class="profile-tagline" id="profile-tagline">Strategie die werkt. Executie die beweegt.</p>
+  </div>
+
+  <div class="links" id="links-container"></div>
+
+  <div class="footer">
+    <img class="footer-logo" src="assets/logo.png" alt="Warenhuis Willemsen" id="footer-logo">
+    <div class="footer-name" id="footer-name">Warenhuis Willemsen</div>
+  </div>
+</div>
+
+<script>
+  const ICONS = {
+    primary: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`,
+    website: `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    github: `<svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
+    food: `<svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/></svg>`,
+    calc: `<svg viewBox="0 0 24 24"><path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 2v3H8V4h8zM8 18v-2h2v2H8zm0-4v-2h2v2H8zm4 4v-2h2v2h-2zm0-4v-2h2v2h-2zm4 4v-2h2v2h-2zm0-4v-2h2v2h-2zm-8-4V8h8v2H8z"/></svg>`,
+    music: `<svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>`,
+    email: `<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>`,
+    default: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>`
+  };
+
+  const INLINE_DATA = {
+    "page_title": "Joep Willemsen — Portfolio",
+    "meta_description": "Joep Willemsen — Digital Transformation Leader",
+    "name": "Joep Willemsen",
+    "title": "Digital Transformation Leader",
+    "tagline": "Strategie die werkt. Executie die beweegt.",
+    "footer_name": "Warenhuis Willemsen",
+    "links": [
+      { "title": "Warenhuis Willemsen", "description": "Mijn professionele website", "url": "https://warenhuiswillemsen.nl", "icon": "primary" },
+      { "title": "FoodNotes", "description": "Receptenplatform met culinaire recepten", "url": "https://foodnotes.nl/", "icon": "food" },
+      { "title": "kCalculator", "description": "Voedingstracker met barcodescanner en AI", "url": "https://kcalculator.eu/", "icon": "calc" },
+      { "title": "Kluisteraar", "description": "Muziekblog met albumrecensies en afspeellijsten", "url": "https://kluisteraar.nl/", "icon": "music" },
+      { "title": "Kluisteraar Beta", "description": "Experimentele versie op Cloudflare Workers", "url": "https://kluisteraar.joep-willemsen.workers.dev/", "icon": "default" },
+      { "title": "GitHub", "description": "Mijn projecten en code", "url": "https://github.com/YeePas", "icon": "github" },
+      { "title": "LinkedIn", "description": "Verbind met mij op LinkedIn", "url": "https://linkedin.com/in/joep-willemsen", "icon": "linkedin" }
+    ]
+  };
+
+  function renderWith(data) {
+    if (data.page_title) document.getElementById('page-title').textContent = data.page_title;
+    if (data.meta_description) document.getElementById('meta-description').setAttribute('content', data.meta_description);
+    if (data.name) document.getElementById('profile-name').textContent = data.name;
+    if (data.title) document.getElementById('profile-title').textContent = data.title;
+    if (data.tagline) document.getElementById('profile-tagline').textContent = data.tagline;
+    if (data.footer_name) document.getElementById('footer-name').textContent = data.footer_name;
+
+    const container = document.getElementById('links-container');
+    container.innerHTML = '';
+    (data.links || []).forEach(link => {
+      const type = link.icon || 'default';
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.className = `link-card type-${type}`;
+      a.innerHTML = `
+        <div class="link-icon">${ICONS[type] || ICONS.default}</div>
+        <div class="link-body">
+          <span class="link-title">${link.title}</span>
+          ${link.description ? `<span class="link-desc">${link.description}</span>` : ''}
+        </div>
+        <div></div>
+      `;
+      container.appendChild(a);
+    });
+  }
+
+  renderWith(INLINE_DATA);
+
+  fetch('content/portfolio.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(data => { if (data) renderWith(data); })
+    .catch(() => {});
+</script>
+</body>
+</html>
