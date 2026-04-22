@@ -77,11 +77,6 @@
     background: var(--ww-gold);
     margin: 0 auto 14px;
   }
-  .profile-tagline {
-    font-size: 15px;
-    line-height: 1.55;
-    color: var(--ww-gray-700);
-  }
 
   /* ── Link cards (Linktree-stijl) ─────────── */
   .links {
@@ -234,7 +229,6 @@
     <div class="profile-eyebrow" id="profile-title">Digital Transformation Leader</div>
     <h1 class="profile-name" id="profile-name">Joep Willemsen</h1>
     <div class="divider"></div>
-    <p class="profile-tagline" id="profile-tagline">Strategie die werkt. Executie die beweegt.</p>
   </div>
 
   <div class="links" id="links-container"></div>
@@ -263,7 +257,6 @@
     "meta_description": "Joep Willemsen — Digital Transformation Leader",
     "name": "Joep Willemsen",
     "title": "Digital Transformation Leader",
-    "tagline": "Strategie die werkt. Executie die beweegt.",
     "footer_name": "Warenhuis Willemsen",
     "links": [
       { "title": "FoodNotes", "description": "Receptenplatform met culinaire recepten", "url": "https://foodnotes.nl/", "icon": "food" },
@@ -280,7 +273,6 @@
     if ('meta_description' in data) document.getElementById('meta-description').setAttribute('content', data.meta_description);
     if ('name' in data)          document.getElementById('profile-name').textContent = data.name;
     if ('title' in data)         document.getElementById('profile-title').textContent = data.title;
-    if ('tagline' in data)       document.getElementById('profile-tagline').textContent = data.tagline;
     if ('footer_name' in data)   document.getElementById('footer-name').textContent = data.footer_name;
 
     const container = document.getElementById('links-container');

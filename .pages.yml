@@ -12,8 +12,7 @@ content:
       - { name: meta_description, label: "Meta beschrijving (SEO)", type: string }
       - { name: name, label: Naam, type: string }
       - { name: title, label: Subtitel, type: string }
-      - { name: tagline, label: Tagline, type: string }
-      - { name: footer_name, label: "Footer tekst", type: string }
+- { name: footer_name, label: "Footer tekst", type: string }
       - name: links
         label: Links
         type: object
