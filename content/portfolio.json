@@ -6,26 +6,26 @@
   "links": [
     {
       "title": "kCalculator",
-      "description": "Voedingstracker met barcodescanner en AI",
+      "description": "Voedingstracker",
       "url": "https://kcalculator.eu/",
       "image": "/assets/icon-512.png",
       "icon": "calc"
     },
     {
       "title": "Kluisteraar",
-      "description": "Muziekblog met albumrecensies en afspeellijsten",
+      "description": "Muziekblog met albumrecensies",
       "url": "https://kluisteraar.nl/",
       "icon": "music"
     },
     {
       "title": "Kluisteraar Beta",
-      "description": "Experimentele versie op Cloudflare Workers",
+      "description": "Redesign van Kluisteraar (Claude/Codex)",
       "url": "https://kluisteraar.joep-willemsen.workers.dev/",
       "icon": "default"
     },
     {
       "title": "FoodNotes",
-      "description": "Receptenplatform met culinaire recepten",
+      "description": "Persoonlijk kookboek met favoriete recepten en technieken. ",
       "url": "https://foodnotes.nl/",
       "icon": "website"
     },
@@ -40,6 +40,11 @@
       "description": "Verbind met mij op LinkedIn",
       "url": "https://linkedin.com/in/joep-willemsen",
       "icon": "linkedin"
+    },
+    {
+      "title": "Warenhuis Willemsen / Professional Portfolio",
+      "description": "Portfolio (work in porgress) ",
+      "url": "https://yeepas.github.io/warenhuiswillemsen/"
     }
   ]
 }
