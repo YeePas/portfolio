@@ -3,18 +3,12 @@
   "meta_description": "Joep Willemsen — Digital Transformation Leader",
   "name": "Joep Willemsen",
   "title": "Digital Transformation Leader",
-  "footer_name": "Warenhuis Willemsen",
   "links": [
-    {
-      "title": "FoodNotes",
-      "description": "Receptenplatform met culinaire recepten",
-      "url": "https://foodnotes.nl/",
-      "icon": "website"
-    },
     {
       "title": "kCalculator",
       "description": "Voedingstracker met barcodescanner en AI",
       "url": "https://kcalculator.eu/",
+      "image": "/assets/icon-512.png",
       "icon": "calc"
     },
     {
@@ -28,6 +22,12 @@
       "description": "Experimentele versie op Cloudflare Workers",
       "url": "https://kluisteraar.joep-willemsen.workers.dev/",
       "icon": "default"
+    },
+    {
+      "title": "FoodNotes",
+      "description": "Receptenplatform met culinaire recepten",
+      "url": "https://foodnotes.nl/",
+      "icon": "website"
     },
     {
       "title": "GitHub",
