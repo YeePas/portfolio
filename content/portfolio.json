@@ -20,7 +20,7 @@
       "title": "Kluisteraar Beta",
       "description": "Redesign van Kluisteraar (Claude/Codex)",
       "url": "https://kluisteraar.joep-willemsen.workers.dev/",
-      "icon": "default"
+      "icon": "music"
     },
     {
       "title": "FoodNotes",
@@ -43,7 +43,8 @@
     {
       "title": "Warenhuis Willemsen / Professional Portfolio",
       "description": "Portfolio (work in porgress) ",
-      "url": "https://yeepas.github.io/warenhuiswillemsen/"
+      "url": "https://yeepas.github.io/warenhuiswillemsen/",
+      "icon": "website"
     }
   ]
 }
